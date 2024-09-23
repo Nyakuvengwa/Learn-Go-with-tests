@@ -8,3 +8,10 @@ func Sum(numbers []int) int {
 	}
 	return sum
 }
+
+func SumAll(numbersArray ...[]int) (result []int) {
+	for _, numbers := range numbersArray {
+		result = append(result, Sum(numbers))
+	}
+	return
+}
